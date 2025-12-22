@@ -1,16 +1,18 @@
-# Ignore environment files
+# ===== ENV =====
 .env
-.env.local
-.env.development
-.env.production
+.env.*
+!.env.example
 
-# Ignore node modules
+# ===== NODE =====
 node_modules/
 
-# Ignore logs and temp data
+# ===== LOGS =====
 logs/
+logs/*.json
 *.log
-*.json
 
-# Ignore local data x
+# ===== DATA LOCAL =====
 src/data/*.json
+
+# ===== ALLOW LOCK FILE =====
+!package-lock.json
