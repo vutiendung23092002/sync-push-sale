@@ -193,3 +193,9 @@ export function buildPushSaleDateRange(fromYmd, toYmd) {
 
   return { fromDate, toDate };
 }
+
+
+export function dateToVN(dateStr) {
+  if (!dateStr) return "";
+  return dateStr.replace("T", " ").split(".")[0] + "+07:00";
+}

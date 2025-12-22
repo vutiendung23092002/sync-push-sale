@@ -1,4 +1,5 @@
 import { generateHash } from "../common/generate-hash.js";
+import { dateToVN } from "../common/time-helper.js";
 
 function mergeOrderDetails(details = []) {
   if (!Array.isArray(details) || details.length === 0) return "";
@@ -76,12 +77,12 @@ export function ordersFormatted(order, costMap = {}) {
     shipping_carrier_name: order?.shippingCarrierName ?? "",
     order_status_name: order?.orderStatusName ?? "",
     reason_to_create: order?.reasonToCreate ?? "",
-    create_time: order?.createTime ?? "",
-    order_confirm_date: order?.orderConfirmDate ?? "",
+    create_time: dateToVN(order?.createTime) ?? "",
+    order_confirm_date: dateToVN(order?.orderConfirmDate) ?? "",
     order_confirm_name: order?.orderConfirmName ?? "",
     delivery_adress: order?.deliveryAdress ?? "",
-    time_sale_receiving_data: order?.timeSaleReceivingData ?? "",
-    time_sales_work_updated: order?.timeSalesWorkUpdated ?? "",
+    time_sale_receiving_data: dateToVN(order?.timeSaleReceivingData) ?? "",
+    time_sales_work_updated: dateToVN(order?.timeSalesWorkUpdated) ?? "",
   };
 
   const hash = generateHash(formatted);
@@ -129,12 +130,12 @@ export function orderToOrderItems(order, costMap = {}) {
       shipping_carrier_name: order?.shippingCarrierName ?? "",
       order_status_name: order?.orderStatusName ?? "",
       reason_to_create: order?.reasonToCreate ?? "",
-      create_time: order?.createTime ?? "",
-      order_confirm_date: order?.orderConfirmDate ?? "",
+      create_time: dateToVN(order?.createTime) ?? "",
+      order_confirm_date: dateToVN(order?.orderConfirmDate) ?? "",
       order_confirm_name: order?.orderConfirmName ?? "",
       delivery_adress: order?.deliveryAdress ?? "",
-      time_sale_receiving_data: order?.timeSaleReceivingData ?? "",
-      time_sales_work_updated: order?.timeSalesWorkUpdated ?? "",
+      time_sale_receiving_data: dateToVN(order?.timeSaleReceivingData) ?? "",
+      time_sales_work_updated: dateToVN(order?.timeSalesWorkUpdated) ?? "",
 
       // ===== ITEM LEVEL =====
       skus: sku ?? "",
