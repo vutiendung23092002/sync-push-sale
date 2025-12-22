@@ -93,7 +93,7 @@ async function syncAllOrders(
   console.log(`🎉 Tổng đơn sync được: ${allOrders.length}`);
 
   const larkClient = await createLarkClient(
-    process.env.LARK_CLIENT_PS,
+    process.env.LARK_APP_ID_PS,
     process.env.LARK_APP_SECRET_PS
   );
 
