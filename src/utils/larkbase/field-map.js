@@ -46,7 +46,7 @@ export const orderFieldMap = {
 };
 
 export const orderTypeMap = {
-  order_number: 1,
+  id: 1,
   order_code: 1,
   tracking_no: 1,
   source_id: 1,
@@ -84,7 +84,7 @@ export const orderTypeMap = {
 
   create_time: 5,
   order_confirm_date: 5,
-  order_confirm_name: 5,
+  order_confirm_name: 1,
 
   time_sale_receiving_data: 5,
   time_sales_work_updated: 5,
@@ -93,7 +93,7 @@ export const orderTypeMap = {
 };
 
 export const orderUiTypeMap = {
-  order_number: "Text",
+  id: "Text",
   order_code: "Text",
   tracking_no: "Text",
   source_id: "Text",
@@ -131,7 +131,7 @@ export const orderUiTypeMap = {
 
   create_time: "DateTime",
   order_confirm_date: "DateTime",
-  order_confirm_name: "DateTime",
+  order_confirm_name: "Text",
 
   time_sale_receiving_data: "DateTime",
   time_sales_work_updated: "DateTime",
@@ -217,7 +217,7 @@ export const orderItemTypeMap = {
 
   create_time: 5,
   order_confirm_date: 5,
-  order_confirm_name: 5,
+  order_confirm_name: 1,
   time_sale_receiving_data: 5,
   time_sales_work_updated:5,
 
@@ -269,7 +269,7 @@ export const orderItemUiTypeMap = {
 
   create_time: "DateTime",
   order_confirm_date: "DateTime",
-  order_confirm_name: "DateTime",
+  order_confirm_name: "Text",
   time_sale_receiving_data: "DateTime",
   time_sales_work_updated: "DateTime",
 

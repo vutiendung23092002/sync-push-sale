@@ -62,6 +62,8 @@ export async function syncDataToLarkBaseFilterDate(
       buildField(key, label, typeMap[key], uiType[key], currencyCode)
     );
 
+    console.log(fields);
+
     tableId = await larkbaseService.ensureLarkBaseTable(
       client,
       baseId,
