@@ -84,6 +84,13 @@ export async function syncDataToLarkBaseFilterDate(
     endDate
   );
 
+  if (!existingRecords || existingRecords.length === 0) {
+    console.log(
+      `[LARK] Gặp lỗi khi lấy dữ liệu từ larkbase về. Dừng đồng bộ để tránh trùng lặp dữ liệu.`
+    );
+    process.exit(0);
+  }
+
   console.log(
     `[LARK] Đã lấy ${existingRecords.length} bản ghi hiện có từ LarkBase.`
   );
